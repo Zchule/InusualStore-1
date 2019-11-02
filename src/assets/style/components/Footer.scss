@@ -1,0 +1,96 @@
+.nav__header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .input2 {
+    outline: 0 none;
+    padding: 5px;
+    border: 0;
+    width: 60%;
+  }
+
+  .subscribeBtn {
+    background: #2FD5F5;
+    color: white;
+    padding: 11px;
+    margin: 0px;
+    border: 0;
+    text-transform: uppercase;
+    width: 45%;
+  }
+
+.footer__container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    grid-template-areas: "logo category form";
+    grid-gap: 10px;
+    background-color: black;
+  
+    .footer__logo {
+      grid-area: logo;
+      width: 150px;
+  
+      img {
+        width: 100%;
+        margin-left: 30px;
+      }
+    }
+  
+    .footer__category {
+      grid-area: category;
+      display: flex;
+      padding: 5px 20px;
+      color: white;
+      align-items: center;
+      padding-bottom: 0;
+      justify-content: space-between;
+  
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px;
+        justify-content: space-evenly;
+  
+        li {
+          padding-left: 50px;
+          list-style: none;
+          font-family: 'Oswald', sans-serif;
+          margin: 5px;
+  
+          a {
+            text-transform: uppercase;
+            color: white;
+            text-decoration: none;
+          }
+          a:hover {
+            color: white;
+          }
+        }
+      }
+    }
+    .footer__form {
+      grid-area: form;
+      padding: 20px;
+  
+      strong {
+        color: white;
+      }
+  
+      .footer__form-email {
+        margin-top: 15px;
+        background-color: white;
+        display: flex;
+        margin-right: 10px;
+      }
+    }
+  }
+  
+  .input2 {
+    outline: 0 none;
+    padding: 5px;
+    border: 0;
+    width: 60%;
+  }
+  
