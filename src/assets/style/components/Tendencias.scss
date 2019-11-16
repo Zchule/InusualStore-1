@@ -1,0 +1,42 @@
+@import './../Vars.scss';
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(0px, 407px));
+    justify-content: center;
+    grid-gap: 10px;
+    padding: 20px;
+  
+    .product__image {
+  
+      .product__image--details {
+        width: inherit;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+  
+        img {
+          margin: 0px;
+          width: 100%;
+          vertical-align: top;
+          height: auto;
+        }
+      }
+    }
+    
+  }
+  
+  .subscribe {
+    background: $main-color;
+    color: white;
+    padding: 11px;
+    margin: 0px;
+    border: 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
+
+  h2.tendencias {
+    margin-left: 50px;
+    margin-bottom: 0px;
+  }

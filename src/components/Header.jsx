@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/inusual.png';
 
 import '../assets/style/components/Header.scss';
@@ -8,7 +8,9 @@ const Header = () => (
   <header>
     <div className="container">
       <div className="container__header imgLogo">
-        <img className="container__header--image" src={logo} alt="" />
+        <Link to='/'>
+          <img className="container__header--image" src={logo} alt="" />
+        </Link>
       </div>
       <div className="container__header search">
         <input type="text" className="input" placeholder="Buscar..." />

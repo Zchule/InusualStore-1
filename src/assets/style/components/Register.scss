@@ -1,0 +1,52 @@
+.input2 {
+    outline: 0 none;
+    padding: 5px;
+    border: 0;
+    width: 60%;
+  }
+  
+  .register__container {
+    height: 100vh;
+  
+    .register__container--form {
+      position: relative;
+      box-shadow: 1px 1px 7px 1px #888888;
+      width: 35%;
+      margin: 0 auto;
+      top: 50px;
+      padding: 40px 10px;
+      border-radius: 41px;
+      color: black;
+      font-family: 'Playfair Display', serif;
+  
+      .form {
+        display: flex;
+        padding: 10px;
+  
+        h4 {
+          margin: 10px;
+        }
+  
+        input {
+          right: 35px;
+          position: absolute;
+          padding: 10px;
+          width: 50%;
+        }
+      }
+      .form__password {
+        display: flex;
+  
+        h4 {
+          margin: 10px;
+        }
+  
+        input {
+          right: 35px;
+          position: absolute;
+          padding: 10px;
+          width: 50%;
+        }
+      }
+    }
+  }
