@@ -34,6 +34,7 @@ const Home = ({ mylist, trends }) => {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state);
   return {
     mylist: state.mylist,
     trends: state.trends,
