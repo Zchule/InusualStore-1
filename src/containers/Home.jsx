@@ -11,29 +11,35 @@ const Home = ({ mylist, trends }) => {
   return (
     <>
       <Container />
-        <Tendencias title="Tendencias"/>
-        <Products>
-          { mylist.map((item)=>{
+        {mylist.length > 0 && (
+          <>
+            <Tendencias title="Tendencias"/>
+            <Products>
+              { mylist.map((item)=>(
+                <Product key={item.id} {...item} />
+              ))}
+            </Products>
+          </>
+        )}
+          <Tendencias title="Tendencias"/>
+          <Products>
+            { trends.map((item) => (
             <Product key={item.id} {...item} />
-          })}
-        </Products>
-        <Tendencias title="Tendencias"/>
-        <Products>
-        { trends.map((item)=>{
-          <Product key={item.id} {...item} />
-          })}
-        </Products>
-        <Tendencias title="Productos nuevos"/>
-        <Products>
-        { trends.map((item)=>{
-          <Product key={item.id} {...item} />
-        })}
-        </Products>
+            ))}
+          </Products>
+          <Tendencias title="Productos nuevos"/>
+          <Products>
+          { trends.map((item)=>(
+            <Product key={item.id} {...item} />
+          ))}
+          </Products>
     </>
   );
 }
 
 const mapStateToProps = (state) => {
+  console.log('estado', state);
+  console.log('estado', state.trends);
   return {
     mylist: state.mylist,
     trends: state.trends,

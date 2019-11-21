@@ -15,7 +15,7 @@ const Header = () => (
       <div className="container__header search">
         <input type="text" className="input" placeholder="Buscar..." />
         <div className="button">
-          <ion-icon className="icon" name="search"></ion-icon>
+          <ion-icon className="iconP" name="search"></ion-icon>
         </div>
       </div>
       <div className="container__header sign">

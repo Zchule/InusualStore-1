@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from './reducers/';
-// PRUEBAS DE CAMBIO
 import App from './assets/routes/App';
 
 const initialState = {
+  "user": {},
   "mylist": [],
+  "prendasSup": {},
   "trends": [
     {
       "id": 2,

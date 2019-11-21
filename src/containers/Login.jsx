@@ -16,7 +16,6 @@ const Login = () =>(
         <div className="form__recuperation">
           <h4>Forgot your password?</h4>
             <button className="ingresar">Ingresar</button>
-            <ion-icon name="heart"></ion-icon>
         </div>
         <div className="createAccount">
             <a href="">No account? Create one here</a> 

@@ -4,17 +4,16 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(0px, 407px));
     justify-content: center;
-    grid-gap: 10px;
+    grid-gap: 25px;
     padding: 20px;
   
     .product__image {
-  
       .product__image--details {
-        width: inherit;
+        width: 80%;
         flex-direction: column;
         display: flex;
         justify-content: center;
-  
+        margin: 0 auto;
         img {
           margin: 0px;
           width: 100%;
@@ -34,4 +33,5 @@
     border: 0;
     border-radius: 5px;
     text-transform: uppercase;
+    margin-bottom: 20px;
   }

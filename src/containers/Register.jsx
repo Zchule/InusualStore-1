@@ -29,11 +29,11 @@ const Register = () =>(
           <h4>Password</h4>
           <input placeholder="password" type="password" />
           <button className="subscribeBtnShow">
-            
+            <ion-icon name="eye"></ion-icon>
           </button>
         </div>
         <div className="buttonRegister">
-          <button className="subscribeRegister">Subcribirse</button>
+          <button className="subscribeRegister">Registrarse</button>
         </div>
       </div>
     </div>
