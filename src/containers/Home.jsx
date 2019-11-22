@@ -7,15 +7,15 @@ import Product from '../components/Product';
 
 import '../assets/style/App.scss';
 
-const Home = ({ mylist, trends }) => {
+const Home = ({ favoritas, nuevos, prendas }) => {
   return (
     <>
       <Container />
-        {mylist.length > 0 && (
+        {nuevos.length > 0 && (
           <>
             <Tendencias title="Tendencias"/>
             <Products>
-              { mylist.map((item)=>(
+              { nuevos.map((item)=>(
                 <Product key={item.id} {...item} />
               ))}
             </Products>
@@ -23,13 +23,13 @@ const Home = ({ mylist, trends }) => {
         )}
           <Tendencias title="Tendencias"/>
           <Products>
-            { trends.map((item) => (
+            { favoritas.map((item) => (
             <Product key={item.id} {...item} />
             ))}
           </Products>
           <Tendencias title="Productos nuevos"/>
           <Products>
-          { trends.map((item)=>(
+          { prendas.map((item)=>(
             <Product key={item.id} {...item} />
           ))}
           </Products>
@@ -38,11 +38,10 @@ const Home = ({ mylist, trends }) => {
 }
 
 const mapStateToProps = (state) => {
-  console.log('estado', state);
-  console.log('estado', state.trends);
   return {
-    mylist: state.mylist,
-    trends: state.trends,
+    prendas: state.prendas,
+    nuevos: state.prendasNuevas,
+    favoritas: state.prendasFavoritas,
   }
 }
 

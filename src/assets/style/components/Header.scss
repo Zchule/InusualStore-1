@@ -39,6 +39,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  .container__header--icon {
+    display: flex;
+  }
 
   .container__header--image {
     width: 150px;
@@ -66,4 +69,22 @@ nav {
 
 ion-icon{
   font-size: 28px;
+}
+
+.cart {
+  position: relative;
+  .cart-counter {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border-radius: 100%;
+    background-color: #2FD5F5;
+    width: 15px;
+    height: 15px;
+    z-index: 2;
+    text-align: center;
+    font-size: 12px;
+    line-height: 15px;
+    color: white;
+  }
 }

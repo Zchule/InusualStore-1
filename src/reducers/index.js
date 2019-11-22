@@ -3,7 +3,7 @@ const reducer = (state, action)=> {
     case 'ADD_CAR_SHOP':
       return {
         ...state,
-        mylist: [...state.mylist, action.payload]
+        misPrendas: [...state.misPrendas, action.payload]
       }
     default:
       return state; 

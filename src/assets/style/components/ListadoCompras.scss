@@ -1,0 +1,85 @@
+@import './../Vars.scss';
+.Main {
+    height: 100vh;
+    
+  }
+
+  h4.total {
+    display: flex;
+    font-size: 30px;
+    justify-content: space-around;
+  }
+
+.ListaCompras {
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 2rem;
+    display: grid;
+    margin: 110px;
+  }
+
+.Checkout__Container-izq {
+    justify-content: center;
+    grid-gap: 10px;
+    padding: 20px;
+    box-shadow: 1px 1px 7px 1px #888888;
+  }
+
+.Checkout-item2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.Checkout-element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+
+.Checkout__Container-der {
+    box-shadow: 1px 1px 7px 1px #888888;
+  }
+
+.shop-cart-item__action {
+    cursor: pointer;
+    display: block;
+    margin-top: 8px;
+    text-transform: uppercase;
+  }
+  
+  .Checkout__info {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: #3c484e;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .subscribeBtnShow {
+    background: #a5a5a7;
+    color: white;
+    height: 37px;
+    margin: 0px;
+    border: 0;
+    text-transform: uppercase;
+    z-index: 2;
+    position: absolute;
+    right: 35px;
+  }
+
+  .subscribe {
+    background: $main-color;
+    color: white;
+    padding: 11px;
+    margin: 0px;
+    border: 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin: 0px 30px;
+  }
