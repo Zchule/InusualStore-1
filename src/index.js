@@ -62,6 +62,27 @@ const initialState = {
       "description": "Vestibulum ac est lacinia nisi venenatis tristique",
       "precio": 10
     },
+    {
+      "id": 51,
+      "title": "Polera",
+      "photo": "https://www.dhresource.com/0x0/f2/albu/g6/M00/06/A1/rBVaSFqt4biANy6hAAKzwzg2WTs423.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "precio": 10
+    },
+    {
+      "id": 52,
+      "title": "Polera",
+      "photo": "https://www.dhresource.com/0x0/f2/albu/g6/M00/06/A1/rBVaSFqt4biANy6hAAKzwzg2WTs423.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "precio": 10
+    },
+    {
+      "id": 53,
+      "title": "Polera",
+      "photo": "https://www.dhresource.com/0x0/f2/albu/g6/M00/06/A1/rBVaSFqt4biANy6hAAKzwzg2WTs423.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "precio": 10
+    },
    ],
   "prendasInferior": [
     {
