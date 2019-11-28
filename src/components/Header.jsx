@@ -2,10 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/inusual.png';
 import { connect } from 'react-redux';
+import userIcon from '../assets/images/user-icon.png';
 
 import '../assets/style/components/Header.scss';
+import gravatar from '../utils/gravatar';
 
-const Header = ({ mylist }) => {
+import { logoutRequest } from '../actions';
+
+
+const Header = ( props ) => {
+
+  const { user, mylist } = props;
+  const hasUser = Object.keys(user).length > 0;
+
+  const handleLogout = () => {
+    props.logoutRequest({});
+  };
   return (
     <header>
       <div className="container">
@@ -22,7 +34,27 @@ const Header = ({ mylist }) => {
         </div>
         <div className="container__header sign">
           <div className="container__header--icon">
-            <ion-icon className="icon" name="person"></ion-icon>
+          <div className='header__menu'>
+            <div className='header__menu--profile'>
+              {hasUser ?
+                <img src={gravatar(user.email)} alt={user.email} /> :
+                <ion-icon name="person"></ion-icon>}
+            </div>
+            <ul className='user'>
+              {hasUser ?
+                <li><a href='/'>{user.name}</a></li> : null}
+
+              {hasUser ?
+                <li><a href='#logout' onClick={handleLogout}>Cerrar Sesión</a></li> : (
+                  <li>
+                    <Link to='/login'>
+                      Iniciar Sesión
+                    </Link>
+                  </li>
+                )}
+            </ul>
+          </div>
+
             <Link to='/listadocompras'>
               <div className="cart">
               {mylist.length > 0 && (
@@ -37,10 +69,27 @@ const Header = ({ mylist }) => {
       <nav>
         <div className="nav__header">
           <ul>
-            <li><a href="#">P. Superiores</a></li>
-            <li><a href="#">P. Inferiores</a></li>
-            <li><a href="#">Accesorios</a></li>
-            <li><a href="#">Zapatos</a></li>
+            <li>
+              <Link className='a' to='/category/nuevo'>
+                Nuevos
+              </Link>
+            </li>
+            
+            <li>
+              <Link className='a' to='/category/trends'>
+                Tendencias
+              </Link>
+            </li>
+            <li>
+              <Link className='a' to='/category/nuevo'>
+                Chompas
+              </Link>
+            </li>
+            <li>
+              <Link className='a' to='/category/trends'>
+                poleras
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
@@ -50,8 +99,13 @@ const Header = ({ mylist }) => {
 
 const mapStateToProps = (state) => {
   return {
+    user: state.user,
     mylist: state.misPrendas,
-  }
-}
+  };
+};
 
-export default connect(mapStateToProps, null)(Header);
+const mapDispachToProps = {
+  logoutRequest,
+};
+
+export default connect(mapStateToProps, mapDispachToProps)(Header);

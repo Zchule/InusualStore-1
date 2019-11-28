@@ -3,8 +3,8 @@ import '../assets/style/components/FormTC.scss';
 import Visa from '../assets/images/visa.png';
 import Visa1 from '../assets/images/visa1.png';
 import Visa2 from '../assets/images/visa2.png';
-import Mastercard from '../assets/images/mastercad.png';
-import American from '../assets/images/amercican.png';
+import Mastercard from '../assets/images/mastercard.png';
+import American from '../assets/images/american.png';
 import Pay_Logo from '../assets/images/PayPal_Logo.png';
 import PSE_Logo from '../assets/images/BotonPSE.png';
 import { Link } from 'react-router-dom';
@@ -60,10 +60,13 @@ return (
             </div>
           </div>
         </div>
+        
         <div className="BtnSubscribe">
-          <button className="subscribe">
-            Pagar
-          </button>
+          <Link to='/sucessfull'>
+            <button className="subscribe">
+              Pagar
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -6,42 +6,40 @@ import Products from '../components/Products';
 import Product from '../components/Product';
 
 import '../assets/style/App.scss';
+import '../assets/style/components/Home.scss';
 
-const Home = ({ favoritas, nuevos, prendas }) => {
+const Home = ({ tendencias, nuevos }) => {
   return (
     <>
       <Container />
-        {nuevos.length > 0 && (
-          <>
-            <Tendencias title="Tendencias"/>
-            <Products>
-              { nuevos.map((item)=>(
-                <Product key={item.id} {...item} />
-              ))}
-            </Products>
-          </>
-        )}
-          <Tendencias title="Tendencias"/>
+      {nuevos.length > 0 && (
+        <>
+          <Tendencias title="Nuevos" />
           <Products>
-            { favoritas.map((item) => (
-            <Product key={item.id} {...item} />
+            {nuevos.map((item) => (
+              <Product key={item.id} {...item} />
             ))}
           </Products>
-          <Tendencias title="Productos nuevos"/>
+        </>
+      )}
+      {tendencias.length > 0 && (
+        <>
+          <Tendencias title="Tendencias" />
           <Products>
-          { prendas.map((item)=>(
-            <Product key={item.id} {...item} />
-          ))}
+            {tendencias.map((item) => (
+              <Product key={item.id} {...item} />
+            ))}
           </Products>
+        </>
+      )}
     </>
   );
 }
 
 const mapStateToProps = (state) => {
   return {
-    prendas: state.prendas,
-    nuevos: state.prendasNuevas,
-    favoritas: state.prendasFavoritas,
+    nuevos: state.prendas.filter(item => item.categories.includes('nuevo')),
+    tendencias: state.prendas.filter(item => item.categories.includes('trends')),
   }
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../assets/style/components/Footer.scss';
+import { Link } from 'react-router-dom';
 
 import logo from '../assets/images/inusual.png';
 
@@ -11,7 +12,11 @@ const Footer = () => (
     </div>
     <div className="footer__category category">
       <ul>
-        <li><a href="#">P. Superiores</a></li>
+        <li>
+          <Link className='a' to='/category/nuevo'>
+            P. Superiores
+          </Link>
+        </li>
         <li><a href="#">P. Inferiores</a></li>
         <li><a href="#">Accesorios</a></li>
         <li><a href="#">Zapatos</a></li>
@@ -26,7 +31,9 @@ const Footer = () => (
       </strong>
       <div className="footer__form-email">
         <input className="input2" type="text" placeholder="Your E-mail" />
-        <button className="subscribeBtn">Subscribe</button>
+        <Link className="subscribeBtn" to='/register'>
+          <button className="subscribeBtn">Subscribe</button>
+        </Link>
       </div>
     </div>
   </footer>

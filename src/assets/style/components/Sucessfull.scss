@@ -1,0 +1,30 @@
+.succesContainer {
+  width: 40%;
+  height: 300px;
+  margin: 0 auto;
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+  .succesContainer__message {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 450px;
+    box-shadow: 1px 1px 7px 1px #888888;
+    .succesContainer__message--title {
+      padding: 20px;
+      .ckeck{
+        width: 150px;
+      }
+    }
+    .succesContainer__message--p {
+      h1.Sucessfull {
+        font-size: 30px;
+        margin: 5px;
+      }
+      p {
+        margin: 5px;
+      }
+    }
+  }
+}
